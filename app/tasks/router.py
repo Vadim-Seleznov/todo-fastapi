@@ -10,7 +10,6 @@ from sqlalchemy import select
 
 router = APIRouter(prefix="/tasks", tags=["tasks"])
 
-# Генератор сессии
 async def get_session() -> AsyncSession:
     async with async_session_maker() as session:
         yield session
